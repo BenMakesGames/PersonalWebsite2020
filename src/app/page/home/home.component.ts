@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  useLinkFlickerIn = true;
+  loaded = false;
   showFilter = false;
   activeLink: Link;
 
@@ -120,6 +122,8 @@ export class HomeComponent implements OnInit {
 
   doToggleTag(tag: string)
   {
+    this.useLinkFlickerIn = false;
+
     const tagIndex = this.selectedTags.indexOf(tag);
 
     if(tagIndex === -1)

@@ -1,3 +1,31 @@
+#loading {
+  position: absolute;
+  top: 40vh;
+  width: 100vw;
+  text-align: center;
+  color: #eee;
+
+  .throbber {
+    margin: 0 auto;
+    display: block;
+    width: 2px;
+    height: 0.2in;
+    background-color: #999;
+    animation-name: loading;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+  }
+
+  > img {
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    top: 0;
+    left: -9999px;
+  }
+}
+
 #filter {
   position: fixed;
   top: 0;
@@ -19,6 +47,7 @@
 #filter-panel {
   padding: 0.45in 0.2in 0.1in;
   background: rgba(0, 16, 32, 0.8);
+  width: 100vw;
   color: #eee;
   border-bottom: 1px solid #eee;
 
@@ -29,14 +58,24 @@
   }
 }
 
+.flickerIn {
+  animation-name: flickerIn;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+}
+
 #andromeda
 {
+  position: absolute;
   width: 100%;
   height: 100%;
   background-image: url(/assets/andromeda.jpg);
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
 }
 
 .stars {
@@ -149,6 +188,10 @@
   border: 1px solid #eee;
   box-sizing: border-box;
   background-color: #012;
+  animation-name: infoBox;
+  animation-timing-function: linear;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
 
   h2,p {
     color: #eee;
@@ -205,4 +248,71 @@
     margin: 0;
     padding: 0 0.2in 0.1in;
   }
+}
+
+@keyframes loading {
+  0% { transform: rotateZ(0deg) }
+  100% { transform: rotateZ(360deg) }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0 }
+  100% { opacity: 1.0 }
+}
+
+@keyframes flickerIn {
+  0% { opacity: 0 }
+  75% { opacity: 0 }
+  77.5% { opacity: 0.5 }
+  82.5% { opacity: 0.1 }
+  87.5% { opacity: 0.7 }
+  90% { opacity: 0.3 }
+  100% { opacity: 1.0 }
+}
+
+#expandingBox {
+  position: absolute;
+  animation-name: expandingBox;
+  animation-iteration-count: 1;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  border: 1px solid #eee;
+  box-sizing: border-box;
+  opacity: 0;
+}
+
+@keyframes expandingBox {
+  0% { opacity: 1 }
+  9% { opacity: 1 }
+  10% { opacity: 0 }
+  19% { opacity: 0 }
+  20% { opacity: 1 }
+  29% { opacity: 1 }
+  30% { opacity: 0 }
+  39% { opacity: 0 }
+  40% { opacity: 1 }
+  49% { opacity: 1 }
+  50% { opacity: 0 }
+  59% { opacity: 0 }
+  60% { opacity: 1 }
+  69% { opacity: 1 }
+  70% { opacity: 0 }
+  79% { opacity: 0 }
+  80% { opacity: 1 }
+  89% { opacity: 1 }
+  90% { opacity: 0 }
+  99% { opacity: 0 }
+  100% {
+    opacity: 1;
+    width: min(80vw, 6in);
+    height: 2in;
+    left: max(10vw, 50vw - 3in);
+    top: 25%;
+  }
+}
+
+@keyframes infoBox {
+  0% { opacity: 0 }
+  99% { opacity: 0 }
+  100% { opacity: 1 }
 }
