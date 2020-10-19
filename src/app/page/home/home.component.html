@@ -1,0 +1,37 @@
+<div id="andromeda" (click)="showFilter = false">
+  <div
+    *ngFor="let p of glowPoints"
+    class="glowPoint"
+    [style.left.vw]="(p.x - p.r) * 100"
+    [style.top.vh]="(p.y - p.r) * 100"
+    [style.width.vw]="p.r * 2 * 100"
+    [style.height.vh]="p.r * 2 * 100"
+  ></div>
+  <div class="stars" id="stars0"></div>
+  <div class="stars" id="stars1"></div>
+  <div class="stars" id="stars2"></div>
+  <button
+    *ngFor="let l of visibleLinks"
+    class="link"
+    [class.highlighted]="l.matches > 0"
+    [style.left.%]="l.link.x * 100"
+    [style.top.%]="l.link.y * 100"
+    (click)="doShowLink(l.link)"
+  ><span *ngIf="l.matches > 0" class="matches">{{ l.matches }}</span></button>
+</div>
+<div id="filter">
+  <button (click)="showFilter = !showFilter">Search...</button>
+  <div id="filter-panel" *ngIf="showFilter">
+    <label *ngFor="let t of allTags">
+      <input type="checkbox" [checked]="selectedTags.indexOf(t) !== -1" (click)="doToggleTag(t)"> {{ t }}
+    </label>
+  </div>
+</div>
+<div id="cover" *ngIf="activeLink" (click)="doCloseInfo()"></div>
+<div id="info" *ngIf="activeLink">
+  <button (click)="doCloseInfo()" class="close">&times;</button>
+  <h2>{{ activeLink.title }}</h2>
+  <img [src]="'/assets/image/' + activeLink.image" alt="preview image">
+  <p>{{ activeLink.description }}</p>
+  <p><a [href]="activeLink.url">{{ activeLink.urlText }}</a></p>
+</div>
