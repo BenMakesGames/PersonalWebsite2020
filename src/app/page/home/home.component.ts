@@ -33,7 +33,7 @@ export class HomeComponent implements OnInit {
       image: 'poppyseedpets.svg',
       url: 'https://poppyseedpets.com',
       urlText: 'poppyseedpets.com',
-      tags: [ 'game', 'simulation', 'JavaScript', 'PHP', 'Angular', 'Symfony' ],
+      tags: [ 'game', 'simulation', 'JavaScript', 'TypeScript', 'PHP', 'Angular', 'Symfony' ],
     },
     {
       x: 0.9,
@@ -49,7 +49,7 @@ export class HomeComponent implements OnInit {
       x: 0.3,
       y: 0.6,
       title: 'Critter World',
-      description: 'An artifical-life program written in Java. The "critters" navigate a world and evolve a neural network via natural selection.',
+      description: 'An artificial-life program written in Java. The "critters" navigate a world and evolve a neural network via natural selection.',
       image: 'critter-world.png',
       url: '/assets/download/CritterWorldViewer.jar',
       urlText: 'Download Java Jar',
@@ -73,7 +73,17 @@ export class HomeComponent implements OnInit {
       image: 'github.png',
       url: 'https://github.com/BenMakesGames',
       urlText: 'github.com/BenMakesGames',
-      tags: [ 'open-source', 'C#', 'JavaScript', 'RPG Maker', 'Angular', 'PHP' ]
+      tags: [ 'open-source', 'C#', 'JavaScript', 'TypeScript', 'RPG Maker', 'Angular', 'PHP' ]
+    },
+    {
+      x: 0.65,
+      y: 0.5,
+      title: 'BenMakesGames on NuGet',
+      description: 'NuGet packages, from small utilities, to a game engine framework for MonoGame.',
+      image: 'nuget.png',
+      url: 'https://www.nuget.org/profiles/BenMakesGames',
+      urlText: 'nuget.org/profiles/BenMakesGames',
+      tags: [ 'open-source', 'C#' ]
     },
     {
       x: 0.575,
@@ -84,6 +94,16 @@ export class HomeComponent implements OnInit {
       url: 'https://benmakesgames.itch.io',
       urlText: 'benmakesgames.itch.io',
       tags: [ 'RPG Maker', 'game', 'C#', 'C++', 'JavaScript' ]
+    },
+    {
+      x: 0.25,
+      y: 0.8,
+      title: '★Kindred',
+      description: 'An idle kingdom-builder game. Recruit immortal Vassals, send them on epic quests, and build your kingdom.',
+      image: 'starkindred.svg',
+      url: 'https://starkindred.com',
+      urlText: 'starkindred.com',
+      tags: [ 'game', 'C#', 'JavaScript', 'TypeScript', 'Angular' ]
     }
   ];
 
