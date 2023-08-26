@@ -29,11 +29,21 @@ export class AppComponent {
       x: 0.6,
       y: 0.25,
       title: 'Poppy Seed Pets',
-      description: 'An idle pet game where your pets act on their own, according to their skills, environments, social networks, and emotional states. Free-to-play. No ads. No micro-transactions. Just have fun!',
+      description: 'A pet game you can play in yor browser. Your pets act on their own, according to their skills, environments, social networks, and emotional states. No ads; no micro-transactions - just have fun!',
       image: 'poppyseedpets.svg',
       url: 'https://poppyseedpets.com',
       urlText: 'poppyseedpets.com',
       tags: [ 'game', 'simulation', 'JavaScript', 'TypeScript', 'PHP', 'Angular', 'Symfony', 'AWS' ],
+    },
+    {
+      x: 0.75,
+      y: 0.35,
+      title: 'Word x Word',
+      description: 'A battle of wits against a friend, or the computer. Reveal words and discover their common theme before your opponent does. Available on Steam for $15.',
+      image: 'wordxword.png',
+      url: 'https://store.steampowered.com/app/2225460/Word_x_Word/',
+      urlText: 'Get it on Steam',
+      tags: [ 'game', 'C#', 'paid', 'Steam' ],
     },
     {
       x: 0.9,
@@ -76,8 +86,8 @@ export class AppComponent {
       tags: [ 'open-source', 'C#', 'JavaScript', 'TypeScript', 'RPG Maker', 'Angular', 'PHP' ]
     },
     {
-      x: 0.65,
-      y: 0.5,
+      x: 0.2,
+      y: 0.7,
       title: 'BenMakesGames on NuGet',
       description: 'NuGet packages, from small utilities, to a game engine framework for MonoGame.',
       image: 'nuget.png',
